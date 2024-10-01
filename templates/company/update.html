@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>Update Company</h1>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        <div class="mb-3">
+            {{ form.name.label(class="form-label") }}
+            {{ form.name(class="form-control") }}
+        </div>
+        <div class="mb-3">
+            {{ form.authorized.label(class="form-label") }}
+            {{ form.authorized(class="form-control") }}
+        </div>
+        <div class="mb-3">
+            {{ form.authorized_number.label(class="form-label") }}
+            {{ form.authorized_number(class="form-control") }}
+        </div>
+        <div class="mb-3">
+            {{ form.price_company.label(class="form-label") }}
+            {{ form.price_company(class="form-control") }}
+        </div>
+        {{ form.submit(class="btn btn-primary") }}
+    </form>
+{% endblock %}

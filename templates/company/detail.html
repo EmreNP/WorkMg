@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>Jobs for Company: {{ company.name }}</h1>
+    
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Job Description</th>
+                <th>Pcs of Plaster</th>
+                <th>Company</th>
+                <th>Amount</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for job in jobs %}
+            <tr>
+                <td>{{ job.description }}</td>
+                <td>{{ job.pcs_plaster }}</td>
+                <td>{{ job.company }}</td>
+                <td>{{ job.pcs_plaster * company.price_company }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <!-- Display the total amount here -->
+    <h3>Total Amount: {{ total_amount }}</h3>
+
+{% endblock %}

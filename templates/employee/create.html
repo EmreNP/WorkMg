@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>Create Employee</h1>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        <div class="mb-3">
+            {{ form.name.label(class="form-label") }}
+            {{ form.name(class="form-control") }}
+        </div>
+        <div class="mb-3">
+            {{ form.employee_number.label(class="form-label") }}
+            {{ form.employee_number(class="form-control") }}
+        </div>
+        <div class="mb-3">
+            {{ form.price_employee.label(class="form-label") }}
+            {{ form.price_employee(class="form-control") }}
+        </div>
+        {{ form.submit(class="btn btn-primary") }}
+    </form>
+{% endblock %}
